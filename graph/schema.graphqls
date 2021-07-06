@@ -1,0 +1,19 @@
+# GraphQL schema example
+#
+# https://gqlgen.com/getting-started/
+
+type PlayerBrawlerStats {
+  id: ID!
+  brawlerName: String!
+  winLoss: Float!
+  wins: Int!
+  losses: Int!
+}
+
+input PlayerInput {
+  playerCode: String!
+}
+
+type Query {
+  getPlayerBrawlerStats(playerInput: PlayerInput): [PlayerBrawlerStats]
+}
